@@ -64,7 +64,7 @@
           <a href="https://www.linkedin.com/in/jonathanromerojs/" class="home__social-icon"
             target="_blank"><i class="bx bxl-linkedin"></i
           ></a>
-          <a href="docs/cv-actualizado-25-9.pdf" class="home__social-icon"
+          <a href="docs/CV-jona.pdf" class="home__social-icon"
             download=""><i class="bx bxs-download"></i
           ></a>
           <a href="https://github.com/JonyWhalee" class="home__social-icon"
@@ -188,13 +188,25 @@
         <section class="contact section" id="contact">
           <h2 class="section-title">Contact</h2>
           <div class="contact__container bd-grid">
-            <form action="" class="contact__form">
-              <input type="text" placeholder="Name" class="contact__input button1">
-              <input  type="mail" placeholder="Email" class="contact__input button1">
-              <textarea  name="" id="" cols="0" rows="10" placeholder="Message"  class="contact__input button1"></textarea>
+            <form action="" class="contact__form contact-form">
+              <input type="text" name="name" placeholder="Name" class="contact__input button1" title="Name only accepts letters and blank spaces"
+              pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+              required>
+              <input  type="email" name="email" placeholder="Email" class="contact__input button1" title="Email incorrect"
+              pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+              <textarea  name="menssage" cols="0" rows="10" placeholder="Message" 
+              data-pattern="^.{1,255}$"
+        title="
+        Your comment should not exceed 255 characters" class="contact__input button1" required></textarea>
 
-              <input type="button" value="Submit" class="contact__button button button1" >
-            </form>           
+              <input type="submit" value="submit" class="contact__button button button1" >
+            </form> 
+            <div class="contact-form-loader none">
+              <img src="media/loader.svg" alt="Cargando" />
+            </div>
+            <div class="contact-form-response none">
+              <p>The message has been sent successfully</p>
+            </div>          
           </div>  
         </section>
         <!-- Footer -->
@@ -204,7 +216,7 @@
             <a href="https://www.linkedin.com/in/jonathanromerojs/" class="footer__icon"
             target="_blank"><i class="bx bxl-linkedin"></i
           ></a>
-          <a href="docs/cv-actualizado-25-9.pdf" class="footer__icon"
+          <a href="docs/CV-jona.pdf" class="footer__icon"
             download=""><i class="bx bxs-download"></i
           ></a>
           <a href="https://github.com/JonyWhalee" class="footer__icon"
