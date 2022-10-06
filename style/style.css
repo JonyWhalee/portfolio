@@ -400,7 +400,7 @@ img {
 .slider-title-container span {
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 14px;
   color: #484848;
   margin-bottom: 5px;
 }
@@ -508,6 +508,16 @@ textarea::placeholder {
 }
 
 /* All media queries */
+@media screen and (max-height: 667px) {
+  .home__img {
+    top: 18rem;
+  }
+}
+@media screen and (max-height: 740px) {
+  .home__img {
+    top: 20rem;
+  }
+}
 @media screen and (min-width: 768px) {
   body {
     margin: 0;
